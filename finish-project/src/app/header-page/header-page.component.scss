@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+header{
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    background: url(../../assets/back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    // padding-left: 389px;
+    // padding-right: 389px;
+    box-sizing: border-box;
+
+    //header 
+
+    .header{
+        margin: auto;
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 21px;
+        justify-content: space-between;
+        border-bottom: 1px solid  #737276;;
+
+        .header__logo{
+            width: 90px;
+            height: 72px;
+            margin-right: 205px;
+            background-image: url(../../assets/logo.png);
+         
+        }
+        .company{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .company__address{
+                display: flex;
+                margin-right: 216px;
+                align-items: center;
+
+                .company__img{
+                    width: 14px;
+                    height: 18px;
+                    margin-right: 19px;
+                }
+                .company__text{
+                    font-size: 13px;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    font-family: 'Roboto', sans-serif;
+                    color: white;
+                    white-space: nowrap;
+                }
+
+            }
+            .company__email{
+                display: flex;
+                align-items: center;
+                margin-right: 135px;
+
+                .company__img{
+                    width: 15px;
+                    height: 10px;
+                    margin-right: 19px;
+                }
+                .company__link{
+                    font-size: 13px;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    font-family: 'Roboto', sans-serif;
+                    color: white;
+                }
+
+            }
+            .company__phone{
+                display: flex;
+                flex-direction: column;
+
+                .company__text{
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 18px;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    margin: 0;
+                    color: white;
+                    margin-bottom: 12px;
+                    text-align: right;
+                }
+                .company__link{
+                    font-size: 13px;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    font-family: 'Roboto', sans-serif;
+                    margin: 0;
+                    color: #00d1f9;
+                }
+
+            }
+        }
+    }
+
+    // menu
+
+    .menu{
+        display: flex;
+        padding: 15px 25px;
+        border-bottom: 1px solid  #737276;
+        margin: auto;
+        
+        p{  
+            font-size: 13px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin: 0;
+            color: white;
+        }
+        .text{
+            margin-right: 89px;
+        }
+    }
+    .about{
+        display: flex;
+        margin: auto;
+        margin-bottom:70px;
+        padding: 0;
+
+        .about__us{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-top: 106px;
+            margin-right: 150px;
+
+            .about__us__heading{
+                font-family: 'Roboto', sans-serif;
+                font-size: 36px;
+                line-height: 1.2;
+                font-weight: 500;
+                margin-bottom: 58px;
+                color: white;
+                margin: 0;
+            }
+            .about__us__text{
+                font-size: 20px;
+                line-height: 1.2;
+                font-weight: 400;
+                font-family: 'Roboto', sans-serif;
+                margin-bottom: 61px;
+                color: white;
+            }
+
+            .our__advantages{
+                display: flex;
+
+                .first__advantage{
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 128px;
+
+                    .time{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 63px;
+
+                        .time__img{
+                            width: 29px;
+                            height: 30px;
+                            margin-right: 38px;
+                        }
+                        .time__text{
+                            font-size: 15px;
+                            line-height: 20px;
+                            font-weight: 300;
+                            font-family: 'Roboto', sans-serif;
+                            color: white;
+                        }
+                    }
+                    .question{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 64px;
+
+                        .question__img{
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 38px;
+                        }
+                        .question__text{
+                            font-size: 15px;
+                            line-height: 20px;
+                            font-weight: 300;
+                            font-family: 'Roboto', sans-serif;
+                            color: white;
+                        }
+                       
+                    }
+                    .discounts{
+                        display: flex;
+                        align-items: center;
+
+                        .discounts__img{
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 38px;
+                        }
+                        .discounts__text{
+                            font-size: 15px;
+                            line-height: 20px;
+                            font-weight: 300;
+                            font-family: 'Roboto', sans-serif;
+                            color: white;
+                        }
+                    }
+                }
+                .last__advantage{
+                    display: flex;
+                    flex-direction: column;
+
+                    .certificate{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 65px;
+
+
+                        .certificate__img{
+                            width: 21px;
+                            height: 30px;
+                            margin-right: 41px;
+                        }
+                        .certificate__text{
+                            font-size: 15px;
+                            line-height: 20px;
+                            font-weight: 300;
+                            font-family: 'Roboto', sans-serif;
+                            color: white;
+                        }
+                    }
+                    .delivery{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 71px;
+
+                        .delivery__img{
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 37px;
+                        }
+                        .delivery__text{
+                            font-size: 15px;
+                            line-height: 20px;
+                            font-weight: 300;
+                            font-family: 'Roboto', sans-serif;
+                            color: white;
+                        }
+                    }
+                    .firstDelevery{
+                        display: flex;
+                        align-items: center;
+
+                        .firstDelevery__img{
+                            width: 30px;
+                            height: 19px;
+                            margin-right: 37px;
+                        }
+                        .firstDelevery__text{
+                            font-size: 15px;
+                            line-height: 20px;
+                            font-weight: 300;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .order__form{
+            padding: 39px 50px;
+            height: 475px;
+            border: 1px solid #ffffff;
+            // box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: white;
+            margin-top: 86px;
+
+            .form__heading{
+                font-size: 18px;
+                line-height: 1.2;
+                font-weight: 600;
+                color: #000000;
+                font-family: 'Roboto', sans-serif;
+                margin-bottom: 29px;
+                white-space: nowrap;
+            }
+            .form__inp{
+                width: 260px;
+                height: 50px;
+                border: 1px solid #e8e8e8;
+                margin-bottom: 9px;
+            }
+            .form__txt{
+                width: 260px;
+                height: 90px;
+                border: 1px solid #e8e8e8;
+                margin-bottom: 19px;
+            }
+            ::-webkit-input-placeholder{
+                text-align: center;
+            }
+            .form__btn{
+                width: 200px;
+                height: 55px;
+                background-color: #23bac1;
+                box-shadow: 0px 6px 18px 0px rgba(28,167,173,0.31);
+                color: white;
+                font-size: 13px;
+                line-height: 1.2;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+                border: none;
+                margin-bottom: 20px;
+            }
+            .small{
+                font-size: 11px;
+                line-height: 1.2;
+                font-weight: 300;
+                color: #7c7c7c;
+                text-decoration: underline;
+                white-space: nowrap;
+            }
+        }
+    }
+}
