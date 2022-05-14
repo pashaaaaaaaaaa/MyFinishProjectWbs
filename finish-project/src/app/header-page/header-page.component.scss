@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-header{
+
+header {
     max-width: 1920px;
     width: 100%;
     display: flex;
@@ -9,133 +10,221 @@ header{
     background-size: cover;
     font-family: 'Roboto', sans-serif;
     flex-direction: column;
-    // padding-left: 389px;
-    // padding-right: 389px;
     box-sizing: border-box;
+    margin: 0 auto;
+
+    @media (min-width:950px) and (max-width: 1200px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 
     //header 
 
-    .header{
+    .header {
         margin: auto;
+        color: white;
+        width: 100%;
+        max-width: 1140px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         padding-top: 20px;
         padding-bottom: 21px;
         justify-content: space-between;
-        border-bottom: 1px solid  #737276;;
+        border-bottom: 1px solid #737276;
 
-        .header__logo{
+        @media (max-width: 1200px) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin: 0;
+            justify-content: space-around;
+        }
+        // @media (max-width:768px) {
+        //     justify-content: space-around;
+        // }
+        @media (max-width:495px) {
+            gap: 10px;
+            flex-direction: column;
+        }
+
+
+        .header__logo {
             width: 90px;
             height: 72px;
-            margin-right: 205px;
             background-image: url(../../assets/logo.png);
-         
+
+            @media (min-width:950px) and (max-width: 1200px) {
+                width: 80px;
+                height: 62px;
+            }
+
         }
-        .company{
+
+        .company__address {
             display: flex;
             align-items: center;
-            justify-content: space-between;
 
-            .company__address{
-                display: flex;
-                margin-right: 216px;
-                align-items: center;
+            .company__img {
+                width: 14px;
+                height: 18px;
+                margin-right: 19px;
+            }
 
-                .company__img{
-                    width: 14px;
-                    height: 18px;
-                    margin-right: 19px;
-                }
-                .company__text{
+            .company__text {
+                display: inline-block;
+                font-size: 13px;
+                line-height: 1.2;
+                font-weight: 400;
+                font-family: 'Roboto', sans-serif;
+                color: white;
+                white-space: nowrap;
+            }
+        }
+
+        .company__email {
+            display: flex;
+            align-items: center;
+
+            .company__img {
+                width: 15px;
+                height: 10px;
+                margin-right: 19px;
+            }
+
+            .company__link {
+                font-size: 13px;
+                line-height: 1.2;
+                font-weight: 400;
+                font-family: 'Roboto', sans-serif;
+                color: white;
+            }
+        }
+
+        .company__phone {
+            display: flex;
+            flex-direction: column;
+
+            .company__text {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                line-height: 1.2;
+                font-weight: 400;
+                margin: 0;
+                color: white;
+                margin-bottom: 12px;
+                text-align: right;
+            }
+
+            .company__link {
+                font-size: 13px;
+                line-height: 1.2;
+                font-weight: 400;
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                color: #00d1f9;
+            }
+
+            @media (min-width:950px) and (max-width: 1200px) {
+
+                .company__text {
                     font-size: 13px;
-                    line-height: 1.2;
-                    font-weight: 400;
-                    font-family: 'Roboto', sans-serif;
-                    color: white;
+                    font-weight: 300;
                     white-space: nowrap;
                 }
 
+                .company__link {
+                    font-size: 10px;
+                    font-weight: 300;
+                    white-space: nowrap;
+
+                }
             }
-            .company__email{
-                display: flex;
-                align-items: center;
-                margin-right: 135px;
 
-                .company__img{
-                    width: 15px;
-                    height: 10px;
-                    margin-right: 19px;
-                }
-                .company__link{
-                    font-size: 13px;
-                    line-height: 1.2;
-                    font-weight: 400;
-                    font-family: 'Roboto', sans-serif;
-                    color: white;
-                }
-
-            }
-            .company__phone{
-                display: flex;
-                flex-direction: column;
-
-                .company__text{
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 18px;
-                    line-height: 1.2;
-                    font-weight: 400;
-                    margin: 0;
-                    color: white;
-                    margin-bottom: 12px;
-                    text-align: right;
-                }
-                .company__link{
-                    font-size: 13px;
-                    line-height: 1.2;
-                    font-weight: 400;
-                    font-family: 'Roboto', sans-serif;
-                    margin: 0;
-                    color: #00d1f9;
-                }
-
-            }
         }
     }
 
     // menu
 
-    .menu{
+    .menu {
         display: flex;
+        flex-wrap: wrap;
+        max-width: 1140px;
+        width: 100%;
+        gap: 20px;
         padding: 15px 25px;
-        border-bottom: 1px solid  #737276;
+        border-bottom: 1px solid #737276;
         margin: auto;
-        
-        p{  
+        justify-content: space-around;
+
+        @media (min-width:950px) and (max-width: 1200px) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin: 0;
+        }
+        @media (max-width:768px) {
+            justify-content: space-around;
+            
+        }
+        @media (max-width:495px) {
+            gap: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+      
+        p {
             font-size: 13px;
             line-height: 1.2;
             font-weight: 400;
             text-transform: uppercase;
             margin: 0;
             color: white;
+
+            @media (min-width:950px) and (max-width: 1200px) {
+                font-size: 11px;
+            }
         }
-        .text{
-            margin-right: 89px;
-        }
+
+        // .text {
+        //     margin-right: 89px;
+
+        //     @media (min-width:950px) and (max-width: 1200px) {
+        //         margin-right: 50px;
+        //     }
+        // }
     }
-    .about{
+
+    .about {
         display: flex;
-        margin: auto;
-        margin-bottom:70px;
+        max-width: 1140px;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-bottom: 70px;
         padding: 0;
 
-        .about__us{
+        @media (max-width: 1200px) {
+            margin-bottom: 50px;
+        }
+        @media (max-width: 950px) {
+            justify-content: center;
+        }
+
+
+
+        .about__us {
             display: flex;
             flex-direction: column;
             text-align: left;
             margin-top: 106px;
-            margin-right: 150px;
 
-            .about__us__heading{
+            @media (min-width:950px) and (max-width: 1200px) {
+                margin-top: 86px;
+                margin-right: 50px;
+            }
+
+            .about__us__heading {
                 font-family: 'Roboto', sans-serif;
                 font-size: 36px;
                 line-height: 1.2;
@@ -143,142 +232,243 @@ header{
                 margin-bottom: 58px;
                 color: white;
                 margin: 0;
+
+                @media (min-width:950px) and (max-width: 1200px) {
+                    font-size: 25px;
+                    margin-bottom: 35px;
+                }
             }
-            .about__us__text{
+
+            .about__us__text {
                 font-size: 20px;
                 line-height: 1.2;
                 font-weight: 400;
                 font-family: 'Roboto', sans-serif;
                 margin-bottom: 61px;
                 color: white;
+
+                @media (min-width:950px) and (max-width: 1200px) {
+                    font-size: 15px;
+                    margin-bottom: 40px;
+                }
             }
 
-            .our__advantages{
+            .our__advantages {
                 display: flex;
 
-                .first__advantage{
+                .first__advantage {
                     display: flex;
                     flex-direction: column;
                     margin-right: 128px;
 
-                    .time{
+                    @media (min-width:950px) and (max-width: 1200px) {
+                        margin-right: 40px;
+                    }
+
+                    .time {
                         display: flex;
                         align-items: center;
                         margin-bottom: 63px;
 
-                        .time__img{
+                        .time__img {
                             width: 29px;
                             height: 30px;
                             margin-right: 38px;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                margin-right: 10px;
+                            }
                         }
-                        .time__text{
+
+                        .time__text {
                             font-size: 15px;
                             line-height: 20px;
                             font-weight: 300;
                             font-family: 'Roboto', sans-serif;
                             color: white;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                font-size: 13px;
+                                white-space: nowrap;
+                            }
+                        }
+
+                        @media (min-width:950px) and (max-width: 1200px) {
+                            margin-bottom: 43px
                         }
                     }
-                    .question{
+
+                    .question {
                         display: flex;
                         align-items: center;
                         margin-bottom: 64px;
 
-                        .question__img{
+                        .question__img {
                             width: 30px;
                             height: 30px;
                             margin-right: 38px;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                margin-right: 10px;
+                            }
+
                         }
-                        .question__text{
+
+                        .question__text {
                             font-size: 15px;
                             line-height: 20px;
                             font-weight: 300;
                             font-family: 'Roboto', sans-serif;
                             color: white;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                font-size: 13px;
+                                white-space: nowrap;
+                            }
                         }
-                       
+
+                        @media (min-width:950px) and (max-width: 1200px) {
+                            margin-bottom: 43px;
+                        }
+
+
                     }
-                    .discounts{
+
+                    .discounts {
                         display: flex;
                         align-items: center;
 
-                        .discounts__img{
+                        .discounts__img {
                             width: 30px;
                             height: 30px;
                             margin-right: 38px;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                margin-right: 10px;
+                            }
+
                         }
-                        .discounts__text{
+
+                        .discounts__text {
                             font-size: 15px;
                             line-height: 20px;
                             font-weight: 300;
                             font-family: 'Roboto', sans-serif;
                             color: white;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                font-size: 13px;
+                                white-space: nowrap;
+                            }
                         }
                     }
                 }
-                .last__advantage{
+
+                .last__advantage {
                     display: flex;
                     flex-direction: column;
 
-                    .certificate{
+                    .certificate {
                         display: flex;
                         align-items: center;
                         margin-bottom: 65px;
 
+                        @media (min-width:950px) and (max-width: 1200px) {
+                            margin-bottom: 43px;
+                        }
 
-                        .certificate__img{
+
+                        .certificate__img {
                             width: 21px;
                             height: 30px;
                             margin-right: 41px;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                margin-right: 10px;
+                            }
                         }
-                        .certificate__text{
+
+                        .certificate__text {
                             font-size: 15px;
                             line-height: 20px;
                             font-weight: 300;
                             font-family: 'Roboto', sans-serif;
                             color: white;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                font-size: 13px;
+                                white-space: nowrap;
+                            }
                         }
                     }
-                    .delivery{
+
+                    .delivery {
                         display: flex;
                         align-items: center;
                         margin-bottom: 71px;
 
-                        .delivery__img{
+                        @media (min-width:950px) and (max-width: 1200px) {
+                            margin-bottom: 43px;
+                        }
+
+                        .delivery__img {
                             width: 30px;
                             height: 30px;
                             margin-right: 37px;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                margin-right: 10px;
+                            }
+
                         }
-                        .delivery__text{
+
+                        .delivery__text {
                             font-size: 15px;
                             line-height: 20px;
                             font-weight: 300;
                             font-family: 'Roboto', sans-serif;
                             color: white;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                font-size: 13px;
+                                white-space: nowrap;
+                            }
                         }
                     }
-                    .firstDelevery{
+
+                    .firstDelevery {
                         display: flex;
                         align-items: center;
 
-                        .firstDelevery__img{
+                        .firstDelevery__img {
                             width: 30px;
                             height: 19px;
                             margin-right: 37px;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                margin-right: 10px;
+                            }
                         }
-                        .firstDelevery__text{
+
+                        .firstDelevery__text {
                             font-size: 15px;
                             line-height: 20px;
                             font-weight: 300;
                             color: white;
+
+                            @media (min-width:950px) and (max-width: 1200px) {
+                                font-size: 13px;
+                                white-space: nowrap;
+                            }
                         }
                     }
                 }
             }
         }
-        .order__form{
+
+        .order__form {
             padding: 39px 50px;
-            height: 475px;
+            height: auto;
             border: 1px solid #ffffff;
             // box-sizing: border-box;
             display: flex;
@@ -288,7 +478,13 @@ header{
             background: white;
             margin-top: 86px;
 
-            .form__heading{
+            @media (min-width:950px) and (max-width: 1200px) {
+                margin-top: 66px;
+                padding: 29px 40px;
+            }
+
+
+            .form__heading {
                 font-size: 18px;
                 line-height: 1.2;
                 font-weight: 600;
@@ -297,26 +493,30 @@ header{
                 margin-bottom: 29px;
                 white-space: nowrap;
             }
-            .form__inp{
+
+            .form__inp {
                 width: 260px;
                 height: 50px;
                 border: 1px solid #e8e8e8;
                 margin-bottom: 9px;
             }
-            .form__txt{
+
+            .form__txt {
                 width: 260px;
                 height: 90px;
                 border: 1px solid #e8e8e8;
                 margin-bottom: 19px;
             }
-            ::-webkit-input-placeholder{
+
+            ::-webkit-input-placeholder {
                 text-align: center;
             }
-            .form__btn{
+
+            .form__btn {
                 width: 200px;
                 height: 55px;
                 background-color: #23bac1;
-                box-shadow: 0px 6px 18px 0px rgba(28,167,173,0.31);
+                box-shadow: 0px 6px 18px 0px rgba(28, 167, 173, 0.31);
                 color: white;
                 font-size: 13px;
                 line-height: 1.2;
@@ -326,7 +526,8 @@ header{
                 border: none;
                 margin-bottom: 20px;
             }
-            .small{
+
+            .small {
                 font-size: 11px;
                 line-height: 1.2;
                 font-weight: 300;
