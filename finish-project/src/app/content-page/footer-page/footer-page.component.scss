@@ -1,0 +1,108 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+.footer__maps{
+    background-image: url(../../../assets/karta_12812.png);
+    background-size: cover;
+    background-position: center;
+    max-width: 1920px;
+    width: 100%;
+    height: 417px;
+    margin-bottom: 70px;
+}
+.text{
+    font-size: 22px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 69px;
+    span{
+        font-size: 22px;
+        line-height: 40px;
+        text-decoration: underline;
+        color: #00d0f9; 
+        font-family: 'Roboto', sans-serif;
+
+    }
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 393px;
+    padding-right: 387px;
+    padding-top: 21px;
+    padding-bottom: 28px;
+    box-sizing: border-box;
+    max-width: 1920px;
+    height: 120px;
+    width: 100%;
+    background: black;
+    .company__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .company__address{
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            .company__img{
+                width: 14px;
+                height: 18px;
+                // background-color: #ffffff;
+                margin-right: 19px;
+            }
+            .company__text{
+                font-size: 13px;
+                line-height: 1.2;
+                font-weight: 400;
+                color: #ffffff;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+        .company__email{
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            .company__img{
+                width: 15px;
+                height: 10px;
+                // background-color: #ffffff;
+                margin-right: 19px;
+            }
+            .company__link{
+                font-size: 13px;
+                line-height: 1.2;
+                font-weight: 400;
+                color: #ffffff;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+        .company__phone{
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            .company__text{
+                font-size: 18px;
+                line-height: 1.2;
+                font-weight: 400;
+                color: #ffffff;
+                font-family: 'Roboto', sans-serif;
+            }
+            .company__link{
+                font-size: 13px;
+                line-height: 1.2;
+                font-weight: 300;
+                text-decoration: underline;
+                color: #00d1f9;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+    }
+}
