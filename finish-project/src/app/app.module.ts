@@ -12,7 +12,7 @@ import { ApplicationPageComponent } from './content-page/application-page/applic
 import { OrderPageComponent } from './content-page/order-page/order-page.component';
 import { DeliveryPageComponent } from './content-page/delivery-page/delivery-page.component';
 import { FooterPageComponent } from './content-page/footer-page/footer-page.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,9 @@ import { FooterPageComponent } from './content-page/footer-page/footer-page.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,10 +6,11 @@
     </div>
     <hr>
     <section class="materials__block">
-        <div class="block__prev">
+        <div class="block__prev" (click)="prevSlide()">
             <img class="prev__img" src="../../../assets/prev.png" alt="prev">
         </div>
-        <div class="block__first__mobile" ng-repeat="(i, slide) in slides">
+        <!-- mobile -->
+        <div class="block__first__mobile" >
             <img class="block__first__img" src="../../../assets/firstMat.png" alt="materials">
 
             <div class="block__first__ellips">
@@ -17,22 +18,7 @@
                 <img class="ellips_2"  src="../../../assets/elips_2.png" alt="elips">
                 <img src="../../../assets/elips_2.png" alt="elips">
             </div>
-            <p class="text">Пенопласт</p>
-            <strong class="text__strong">от 500 руб</strong>
-            <button class="btn__sale">
-                <img class="btn__img" src="../../../assets/sale.png" alt="sale">
-                <p class="btn__text">купить</p>
-            </button>
-        </div>
-        <div class="block__first" ng-repeat="(i, slide) in slides">
-            <img class="block__first__img" src="../../../assets/firstMat.png" alt="materials">
-
-            <div class="block__first__ellips">
-                <img class="ellips_1" src="../../../assets/ellips_1.png" alt="elips">
-                <img class="ellips_2"  src="../../../assets/elips_2.png" alt="elips">
-                <img src="../../../assets/elips_2.png" alt="elips">
-            </div>
-            <p class="text">Пенопласт</p>
+            <p class="text">Резак 18 мм</p>
             <strong class="text__strong">от 500 руб</strong>
             <button class="btn__sale">
                 <img class="btn__img" src="../../../assets/sale.png" alt="sale">
@@ -40,51 +26,24 @@
             </button>
         </div>
 
-        <div class="block__first">
-            <img class="block__first__img" src="../../../assets/secondMat.png" alt="materials">
-            <div class="block__first__ellips">
-                <img class="ellips_1" src="../../../assets/ellips_1.png" alt="elips">
-                <img class="ellips_2"  src="../../../assets/elips_2.png" alt="elips">
-                <img src="../../../assets/elips_2.png" alt="elips">
-            </div>
-            <p class="text">Пенокартон</p>
-            <strong class="text__strong">от 100 руб</strong>
-            <button class="btn__sale">
-                <img class="btn__img" src="../../../assets/sale.png" alt="sale">
-                <p class="btn__text">купить</p>
-            </button>
-        </div>
+        <!-- desktop -->
 
-        <div class="block__first">
-            <img class="block__first__img" src="../../../assets/thridMat.png" alt="materials">
+        <div class="block__first" *ngFor="let slide of slides" > 
+            <img class="block__first__img" [src]="slide.img" alt="materials">
+            
             <div class="block__first__ellips">
                 <img class="ellips_1" src="../../../assets/ellips_1.png" alt="elips">
                 <img class="ellips_2"  src="../../../assets/elips_2.png" alt="elips">
                 <img src="../../../assets/elips_2.png" alt="elips">
             </div>
-            <p class="text">ПВХ</p>
-            <strong class="text__strong">от 350 руб</strong>
+            <p class="text">{{slide.text}}</p>
+            <strong class="text__strong">{{slide.price}}</strong>
             <button class="btn__sale">
                 <img class="btn__img" src="../../../assets/sale.png" alt="sale">
-                <p class="btn__text">купить</p>
+                <p class="btn__text" (click)="purchase(slide)">купить</p>
             </button>
         </div>
-
-        <div class="block__first">
-            <img class="block__first__img" src="../../../assets/fourMat.png" alt="materials">
-            <div class="block__first__ellips">
-                <img class="ellips_1" src="../../../assets/ellips_1.png" alt="elips">
-                <img class="ellips_2"  src="../../../assets/elips_2.png" alt="elips">
-                <img src="../../../assets/elips_2.png" alt="elips">
-            </div>
-            <p class="text">Полистирол</p>
-            <strong class="text__strong">от 400 руб</strong>
-            <button class="btn__sale">
-                <img class="btn__img" src="../../../assets/sale.png" alt="sale">
-                <p class="btn__text">купить</p>
-            </button>
-        </div>
-        <div class="block__next">
+        <div class="block__next" (click)="nextSlide()">
             <img class="next__img" src="../../../assets/next.png" alt="next">
         </div>
     </section>

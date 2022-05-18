@@ -6,11 +6,11 @@
             </h1>
             <hr>
             <strong class="text">Оставьте заявку и мы подберем Вам необходимые для Вас материалы</strong>
-            <form class="form__application">
-                <input class="form__inp" placeholder="Ваше имя">
-                <input class="form__inp" placeholder="Контактный телефон">
-                <input class="form__txt" placeholder="Какие материалы вам требуются?">
-                <button class="form__btn">оставить заявку</button>
+            <form class="form__application" [formGroup]="formRequest" >
+                <input class="form__inp" placeholder="Ваше имя ***" formControlName="nameUser" required>
+                <input class="form__inp" placeholder="Контактный телефон ***" formControlName="numberUser" required>
+                <input class="form__txt" placeholder="Какие материалы вам требуются?" formControlName="materialsUser" required>
+                <button class="form__btn" (click)="sendRequest()">оставить заявку</button>
             </form>
             <small class="small">Нажимая на кнопку оставить заявку вы соглашаетесь с политикой обработка данных</small>
         </section>

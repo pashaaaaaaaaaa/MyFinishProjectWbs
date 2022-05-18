@@ -101,6 +101,8 @@ hr{
     height: 50px;
     border: 1px solid #e8e8e8;
     margin-right: 30px;
+    box-sizing: border-box;
+    padding: 5px 15px;
     @media (min-width:320px) and (max-width:768px) {
         margin: 0;
         margin-bottom: 10px;
@@ -118,6 +120,8 @@ hr{
     height: 50px;
     border: 1px solid #e8e8e8;
     margin-right: 30px;
+    box-sizing: border-box;
+    padding: 5px 15px;
     @media (min-width:320px) and (max-width:768px) {
         margin: 0;
         margin-bottom: 10px;
@@ -161,4 +165,8 @@ hr{
         font-size: 8px;
         white-space: wrap;
     }   
+}
+.error{
+    color: red;
+    font-size: 3px;
 }

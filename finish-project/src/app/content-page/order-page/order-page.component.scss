@@ -27,7 +27,6 @@
     @media (min-width:1530px) and (max-width:1679px){
         padding-left: 200px;
         padding-right: 200px;
-        border: 1px solid red;
         flex-direction: column;
     }
     @media (min-width:1024px) and (max-width:1200px){
@@ -60,8 +59,8 @@
         padding-right: 100px;
     }
     @media (min-width:320px) and (max-width:500px){
-        padding-left: 90px;
-        padding-right: 90px;
+        padding-bottom: 50px;
+        padding: 0;
         box-sizing: border-box;
         height: auto;
         text-align: center;
@@ -91,12 +90,16 @@ hr{
     border: 1px solid #05d0da;
     margin-bottom: 99px;
     @media (min-width:320px) and (max-width:768px) {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    @media (min-width:768px) and (max-width:1024px) {
+        margin-bottom: 40px;
     }
 }
 .order__icon{
     display: flex;
     width: 100%;
+    justify-content: space-between;
     flex-wrap: wrap;
     @media (min-width:1440px) and (max-width:1910px) {
         justify-content: space-between;
@@ -118,6 +121,7 @@ hr{
     }
     @media (min-width:768px) and (max-width:1440px){
         margin-right: 10px;
+        margin-bottom: 10px;
     }
     @media (min-width:320px) and (max-width:768px){
         display: flex;
@@ -160,6 +164,7 @@ hr{
     }
     @media (min-width:768px) and (max-width:1440px){
         margin-right: 10px;
+        margin-bottom: 10px;
     }
     @media (min-width:320px) and (max-width:768px){
         margin: 0;
@@ -196,6 +201,7 @@ hr{
     }
     @media (min-width:768px) and (max-width:1440px){
         margin-right: 10px;
+        margin-bottom: 10px;
     }
     @media (min-width:320px) and (max-width:768px){
         margin: 0;

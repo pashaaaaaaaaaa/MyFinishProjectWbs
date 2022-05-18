@@ -63,17 +63,20 @@
                     
                 </div>
             </div>
-            <form class="order__form">
+            <form class="order__form" [formGroup]="formRequest">
                 <h2 class="form__heading">
                     Закажите макетные материалы<br> прямо сейчас
                 </h2>
-                <input class="form__inp" placeholder="Ваше имя">
-                <input class="form__inp" placeholder="Контактный телефон">
-                <input class="form__txt" placeholder="Какие материалы вам требуются?">
-                <button class="form__btn">оставить заявку</button>
+                <input class="form__inp" placeholder="Ваше имя ***" formControlName="nameUser" required>
+                <p class="error" *ngIf="formRequest.get('nameUser')?.getError('required') && formRequest.get('nameUser')?.touched">
+                Пожалуйста введите ваше имя</p>
+                <input class="form__inp" placeholder="Контактный телефон ***" formControlName="numberUser" required>
+                <p class="error" *ngIf="formRequest.get('numberUser')?.getError('required') && formRequest.get('numberUser')?.touched">
+                Пожалуйста введите ваше номер телефона</p>
+                <input class="form__txt" placeholder="Какие материалы вам требуются?" formControlName="materialsUser" required>
+                <button class="form__btn" (click)="sendRequest()">оставить заявку</button>
                 <small class="small">Нажимая на кнопку оставить заявку<br> вы соглашаетесь с политикой обработка данных</small>
             </form>
         </section>
-
     </header>
 </ng-container>
