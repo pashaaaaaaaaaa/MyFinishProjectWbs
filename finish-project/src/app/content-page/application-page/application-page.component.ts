@@ -35,7 +35,7 @@ export class ApplicationPageComponent implements OnInit {
     })
   }
   sendRequest(): void{
-    if (this.formRequest.value.nameUser.trim() || (this.formRequest.value.numberUser.trim())) {
+    if (this.formRequest.get("nameUser")?.value.trim() && (this.formRequest.get("numberUser")?.value.trim() && (this.formRequest.get("materialsUser")?.value.trim()))) {
       let arrForm: IFormRequest = {
         user: this.formRequest.get("nameUser")?.value,
         number: this.formRequest.get("numberUser")?.value,
