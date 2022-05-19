@@ -1,15 +1,15 @@
 <ng-container>
-    <main class="materials">
+    <main class="materials" id="layout">
         <h1 class="materials__heading">Макетирование</h1>
         <div class="materials__bulder">
             <img src="../../../assets/sloy.png" alt="bulder" class="bulderOne">
         </div>
         <hr>
         <section class="materials__block">
-            <div class="block__prev">
+            <div class="block__prev" (click)="prevSlide()">
                 <img class="prev__img" src="../../../assets/prev.png" alt="prev">
             </div>
-
+            <!-- mobile -->
             <div class="block__first__mobile" ng-repeat="(i, slide) in slides">
                 <img class="block__first__img" src="../../../assets/mans.png" alt="materials">
                 <div class="block__first__ellips">
@@ -25,68 +25,24 @@
                     <p class="btn__text">купить</p>
                 </button>
             </div>
-
-            <div class="block__first" ng-repeat="(i, slide) in slides">
-                <img class="block__first__img" src="../../../assets/mans.png" alt="materials">
-    
+            <!-- desktop -->
+            
+            <div class="block__first" *ngFor="let slide of slides" > 
+                <img class="block__first__img" [src]="slide.img" alt="materials">
+                
                 <div class="block__first__ellips">
                     <img class="ellips_1" src="../../../assets/ellips_1.png" alt="elips">
                     <img class="ellips_2"  src="../../../assets/elips_2.png" alt="elips">
                     <img src="../../../assets/elips_2.png" alt="elips">
                 </div>
-                <p class="text">Модели людей масштаб 1:50, 1:87, 1:100, 1:150, 1:200</p>
-                <strong class="text__strong">от 500 руб</strong>
+                <p class="text">{{slide.text}}</p>
+                <strong class="text__strong">{{slide.price}}</strong>
                 <button class="btn__sale">
                     <img class="btn__img" src="../../../assets/sale.png" alt="sale">
-                    <p class="btn__text">купить</p>
+                    <p class="btn__text" (click)="purchase(slide)">купить</p>
                 </button>
             </div>
-    
-            <div class="block__first">
-                <img class="block__first__img" src="../../../assets/car.png" alt="materials">
-                <div class="block__first__ellips">
-                    <img class="ellips_1" src="../../../assets/ellips_1.png" alt="elips">
-                    <img class="ellips_2"  src="../../../assets/elips_2.png" alt="elips">
-                    <img src="../../../assets/elips_2.png" alt="elips">
-                </div>
-                <p class="text">Модели авто масштаб 1:50, 1:87, 1:100, 1:150, 1:200</p>
-                <strong class="text__strong">от 100 руб</strong>
-                <button class="btn__sale">
-                    <img class="btn__img" src="../../../assets/sale.png" alt="sale">
-                    <p class="btn__text">купить</p>
-                </button>
-            </div>
-    
-            <div class="block__first">
-                <img class="block__first__img" src="../../../assets/trees.png" alt="materials">
-                <div class="block__first__ellips">
-                    <img class="ellips_1" src="../../../assets/ellips_1.png" alt="elips">
-                    <img class="ellips_2"  src="../../../assets/elips_2.png" alt="elips">
-                    <img src="../../../assets/elips_2.png" alt="elips">
-                </div>
-                <p class="text">Модели деревьев масштаб 1:50, 1:87, 1:100, 1:150, 1:200</p>
-                <strong class="text__strong">от 350 руб</strong>
-                <button class="btn__sale">
-                    <img class="btn__img" src="../../../assets/sale.png" alt="sale">
-                    <p class="btn__text">купить</p>
-                </button>
-            </div>
-    
-            <div class="block__first">
-                <img class="block__first__img" src="../../../assets/flashlight.png" alt="materials">
-                <div class="block__first__ellips">
-                    <img class="ellips_1" src="../../../assets/ellips_1.png" alt="elips">
-                    <img class="ellips_2"  src="../../../assets/elips_2.png" alt="elips">
-                    <img src="../../../assets/elips_2.png" alt="elips">
-                </div>
-                <p class="text">Модели фонарей масштаб 1:50, 1:87, 1:100, 1:150, 1:200</p>
-                <strong class="text__strong">от 400 руб</strong>
-                <button class="btn__sale">
-                    <img class="btn__img" src="../../../assets/sale.png" alt="sale">
-                    <p class="btn__text">купить</p>
-                </button>
-            </div>
-            <div class="block__next">
+            <div class="block__next" (click)="nextSlide()">
                 <img class="next__img" src="../../../assets/next.png" alt="next">
             </div>
         </section>

@@ -23,14 +23,16 @@ export class HeaderPageComponent implements OnInit {
       ),
       numberUser: new FormControl('', [
         Validators.required,
+        Validators.minLength(12),
+
       ]),
-      materialsUser: new FormControl('', [
+      materialsUser: new FormControl('', 
         Validators.minLength(5),
-      ]),
+      ),
     })
   }
   sendRequest(): void{
-    if (this.formRequest.value.nameUser.trim() || (this.formRequest.value.numberUser.trim())) {
+    if (this.formRequest.value.trim() || (this.formRequest.value.trim())) {
       let arrForm: IFormRequest = {
         user: this.formRequest.get("nameUser")?.value,
         number: this.formRequest.get("numberUser")?.value,

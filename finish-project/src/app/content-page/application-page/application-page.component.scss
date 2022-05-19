@@ -142,7 +142,7 @@ hr{
 .form__btn {
     width: 261px;
     height: 50px;
-    background-color: #23bac1;
+    background: #3b3d41;
     box-shadow: 0px 6px 18px 0px rgba(28, 167, 173, 0.31);
     color: white;
     font-size: 13px;
@@ -151,6 +151,18 @@ hr{
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     border: none;
+    &--active {
+        background-color: #23bac1;
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        color: white;
+        align-items: center;
+        border: none;
+        font-weight: 700;
+        width: 261px;
+        height: 50px;
+    }
+
     
 }
 

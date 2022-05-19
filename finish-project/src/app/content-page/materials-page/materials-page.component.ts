@@ -77,18 +77,17 @@ export class MaterialsPageComponent implements OnInit {
   prevSlide():void {
     const newSlides:any[] = []
     this.slides.forEach((slide, index) => {
-      if (index > 0 ) {
-        newSlides[index] = this.slides[0];
+      if (index < this.slides.length - 1 ) {
+        newSlides[index] = this.slides[index + 1];
       }
       else {
-        newSlides[index] = this.slides[this.slides.length - 1];
+        newSlides[index] = this.slides[0];
       }
     })
     this.slides = newSlides
   }
 
   purchase(slide:IMaterials):void {
-    // console.log(`Список товаро:${JSON.stringify(slide)}`)
     this.arrOfOrders.push(slide)
     console.log(this.arrOfOrders)
   }

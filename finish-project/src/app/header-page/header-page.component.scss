@@ -146,6 +146,7 @@ header {
                 color: white;
                 margin-bottom: 12px;
                 text-align: right;
+                text-decoration: none;
                 @media (min-width:495px) and (max-width:768px) {
                   font-size: 13px;
                   margin-bottom: 5px;
@@ -222,20 +223,25 @@ header {
         }
 
 
-        p {
+        .text{
             font-size: 13px;
             line-height: 1.2;
             font-weight: 400;
             text-transform: uppercase;
             margin: 0;
             color: white;
-
+            text-decoration: none;
             @media (min-width:950px) and (max-width: 1200px) {
                 font-size: 11px;
             }
             @media (min-width:320px) and (max-width:495px) {
                 font-size: 10px;
             }
+        }
+        .text:hover{
+            color: #00d1f9;
+            text-decoration: none;
+            cursor: pointer;
         }
     }
 
@@ -742,6 +748,8 @@ header {
                 border: 1px solid #e8e8e8;
                 box-sizing: border-box;
                 padding: 10px 15px;
+                outline: none;
+                cursor: pointer;
             }
             .error{
                 margin: 0;
@@ -764,9 +772,10 @@ header {
             }
 
             .form__btn {
+                text-align: center;
                 width: 200px;
                 height: 55px;
-                background-color: #23bac1;
+                background: #3b3d41;
                 box-shadow: 0px 6px 18px 0px rgba(28, 167, 173, 0.31);
                 color: white;
                 font-size: 13px;
@@ -776,6 +785,18 @@ header {
                 font-family: 'Roboto', sans-serif;
                 border: none;
                 margin-bottom: 20px;
+                box-sizing: border-box;
+                &--active {
+                    background-color: #23bac1;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 13px;
+                    color: white;
+                    align-items: center;
+                    border: none;
+                    font-weight: 700;
+                    width: 200px;
+                    height: 55px;
+                }
             }
 
             .small {

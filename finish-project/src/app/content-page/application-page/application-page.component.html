@@ -10,7 +10,7 @@
                 <input class="form__inp" placeholder="Ваше имя ***" formControlName="nameUser" required>
                 <input class="form__inp" placeholder="Контактный телефон ***" formControlName="numberUser" required>
                 <input class="form__txt" placeholder="Какие материалы вам требуются?" formControlName="materialsUser" required>
-                <button class="form__btn" (click)="sendRequest()">оставить заявку</button>
+                <button class="form__btn" (click)="sendRequest()" [class]="formRequest.valid ? 'form__btn--active' : 'form__btn'" [disabled]="formRequest.invalid">оставить заявку</button>
             </form>
             <small class="small">Нажимая на кнопку оставить заявку вы соглашаетесь с политикой обработка данных</small>
         </section>

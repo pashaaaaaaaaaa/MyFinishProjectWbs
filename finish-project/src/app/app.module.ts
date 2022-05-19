@@ -13,6 +13,7 @@ import { OrderPageComponent } from './content-page/order-page/order-page.compone
 import { DeliveryPageComponent } from './content-page/delivery-page/delivery-page.component';
 import { FooterPageComponent } from './content-page/footer-page/footer-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OwlOptions } from 'ngx-owl-carousel-o'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

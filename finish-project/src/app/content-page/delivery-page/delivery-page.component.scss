@@ -220,6 +220,11 @@ hr{
         @media (min-width:1024px) {
             margin: 0;
             margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        @media (min-width:1050px) {
+            margin: 0;
+            margin-top: 15px;
             margin-bottom: 45px;
         }
 
@@ -334,7 +339,7 @@ hr{
         text-decoration: underline;
         color: #000000;
         font-family: 'Roboto', sans-serif;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 }
 .social__phone{
@@ -346,6 +351,7 @@ hr{
         margin-right: 40px;
     }
     @media (min-width:320px) and (max-width:600px){
+        margin-bottom: 10px;
         margin: 0;
     }
     img{
@@ -363,8 +369,7 @@ hr{
         text-decoration: underline;
         color: #000000;
         font-family: 'Roboto', sans-serif;
-        margin-bottom: 10px;
-        
+        margin-bottom: 30px;
     }
 }
 .social__oclock{
@@ -372,14 +377,15 @@ hr{
     flex-direction: column;
     align-items: center;
     img{
+        margin-top: -20px;
         width: 30px;
         height: 30px;
-        margin-bottom: 34px;
+        margin-bottom: 30px;
         @media (min-width:320px) and (max-width:600px){
             margin-bottom: 10px;
         }
     }
-    a{
+    p{
         font-size: 16px;
         line-height: 22px;
         font-weight: 400;
@@ -387,6 +393,6 @@ hr{
         color: #000000;
         font-family: 'Roboto', sans-serif;
         margin-bottom: 10px;
-
+        margin: 0;
     }
 }
